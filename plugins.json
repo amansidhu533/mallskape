@@ -1,0 +1,32 @@
+{
+  "InstalledPluginNames": [
+    "SevenSpikes.Core",
+    "SevenSpikes.Nop.Plugins.AjaxCart",
+    "DiscountRequirement.MustBeAssignedToCustomerRole",
+    "CurrencyExchange.ECB",
+    "Misc.SendinBlue",
+    "Payments.CheckMoneyOrder",
+    "Payments.Manual",
+    "Payments.PayPalStandard",
+    "Payments.Qualpay",
+    "Payments.Square",
+    "Pickup.PickupInStore",
+    "Shipping.FixedByWeightByTotal",
+    "Shipping.UPS",
+    "Tax.Avalara",
+    "Tax.FixedOrByCountryStateZip",
+    "Widgets.GoogleAnalytics",
+    "Widgets.NivoSlider",
+    "ExternalAuth.Google",
+    "ExternalAuth.Facebook",
+    "Payments.CashOnDelivery",
+    "Payments.Stripe",
+    "SevenSpikes.Nop.Plugins.AnywhereSliders",
+    "Atluz.Razorpay",
+    "Payments.NGenius",
+    "Nestorbird.Plugin.Api"
+  ],
+  "PluginNamesToUninstall": [],
+  "PluginNamesToDelete": [],
+  "PluginNamesToInstall": []
+}

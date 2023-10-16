@@ -1,0 +1,38 @@
+image: docker:stable
+
+services:
+  - docker:dind
+
+before_script:
+  - docker info
+
+build:
+  only:
+    - master
+  before_script:
+    - docker login registry.gitlab.com -u ${CI_REGISTRY_USER} -p ${CI_REGISTRY_PASSWORD}
+  script:
+    - docker build -t registry.gitlab.com/nhkteam/nhk-food-4.2 .
+    - docker push registry.gitlab.com/nhkteam/nhk-food-4.2
+  after_script:
+    - docker logout ${CI_REGISTRY}
+  stage: build
+  tags: 
+    - docker
+before_script:
+  - apk update -qq
+  - apk add bash
+  - apk add git
+  - apk add openssh
+  - bash .gitlab-deploy.sh
+    
+deploy_staging:
+  type: deploy
+  environment:
+    name: staging
+    url: ec2-13-233-199-188.ap-south-1.compute.amazonaws.com
+  script:
+    - scp -r ./.deploy.sh ubuntu@${DEPLOY_SERVER}:~/
+    - ssh ubuntu@$DEPLOY_SERVER "bash .deploy.sh"
+  only:
+    - master

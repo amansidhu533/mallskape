@@ -1,0 +1,5 @@
+{
+  "DataProvider": "sqlserver",
+    "DataConnectionString": "Data Source=64.227.171.74\\SQLEXPRESS,1433;Initial Catalog=mallskapedev;Integrated Security=False;Persist Security Info=False;MultipleActiveResultSets=true; User ID=mallskapedev_user;Password=Ms@&yE%n*=oi",
+  "RawDataSettings": {}
+}
